@@ -1,0 +1,5 @@
+obj
+bin
+Commands.txt
+appsettings.json
+*.db

@@ -6,7 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85ae3c5-0926-4de8-8f73-fd9420044f2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/API/Controllers/BasketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/BasketController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/StoreContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/StoreContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/StoreContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/StoreContextSeed.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.API">
     <configuration name="API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -61,13 +65,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="c85ae3c5-0926-4de8-8f73-fd9420044f2a" name="Changes" comment="" />
       <created>1646112506184</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646112506184</updated>
       <workItem from="1646112531583" duration="1668000" />
+      <workItem from="1650394271682" duration="384000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

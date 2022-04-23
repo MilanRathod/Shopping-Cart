@@ -42,19 +42,17 @@ namespace API
             services.AddApplicationServices();
             services.AddIdentityServices(_config);
             services.AddSwaggerDocumentation();
-            services
-                .AddCors(opt =>
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy",
+                policy =>
                 {
-                    opt
-                        .AddPolicy("CorsPolicy",
-                        policy =>
-                        {
-                            policy
-                                .AllowAnyHeader()
-                                .AllowAnyMethod()
-                                .WithOrigins("https://localhost:4200");
-                        });
+                    policy
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .WithOrigins("https://localhost:4200");
                 });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,11 +72,10 @@ namespace API
             app.UseAuthorization();
 
             app.UseSwaggerdocumentation();
-            app
-                .UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllers();
-                });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

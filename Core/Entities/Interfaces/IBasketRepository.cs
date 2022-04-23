@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
-using Core.Entities;
 
-namespace Core.Interfaces
+namespace Core.Entities.Interfaces
 {
     public interface IBasketRepository
     {

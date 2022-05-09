@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
 using Core.Entities;
-using Core.Entities.Interfaces;
+using Core.Interfaces;
 
-namespace Core.Entities.Interfaces
+namespace Core.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {

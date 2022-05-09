@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Threading.Tasks;
 using Core.Entities;
-using Core.Entities.Interfaces;
+using Core.Interfaces;
 
 namespace Infrastructure.Data
 {

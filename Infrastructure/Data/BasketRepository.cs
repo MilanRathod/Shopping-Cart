@@ -2,7 +2,7 @@ using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Core.Entities;
-using Core.Entities.Interfaces;
+using Core.Interfaces;
 using StackExchange.Redis;
 
 namespace Infrastructure.Data

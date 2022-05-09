@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities.OrderAggregate;
 
-namespace Core.Entities.Interfaces
+namespace Core.Interfaces
 {
     public interface IOrderService
     {

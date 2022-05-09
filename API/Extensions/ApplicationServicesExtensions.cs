@@ -1,6 +1,5 @@
 using System.Linq;
 using API.Errors;
-using Core.Entities.Interfaces;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Services;

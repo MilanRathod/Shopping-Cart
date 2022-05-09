@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Core.Entities;
 using Core.Specification;
 
-namespace Core.Entities.Interfaces
+namespace Core.Interfaces
 {
     public interface IGenericRepository<T> where T : BaseEntities
     {

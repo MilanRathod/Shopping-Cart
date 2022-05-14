@@ -4,7 +4,5 @@ Commands.txt
 appsettings.json
 *.db
 *.rdb
-.vs
-.vscode
-.idea
-.config
+/.idea/.idea.skinet/.idea
+.config/

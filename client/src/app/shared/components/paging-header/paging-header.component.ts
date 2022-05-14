@@ -13,6 +13,7 @@ export class PagingHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Shared module called");
   }
 
 }

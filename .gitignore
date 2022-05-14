@@ -4,3 +4,7 @@ Commands.txt
 appsettings.json
 *.db
 *.rdb
+.vs
+.vscode
+.idea
+.config

@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "68cebf6e-6b12-4120-8252-bd4e689a61a4"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -20,10 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/client",
+            "allowedCommonJsDependencies": [
+              "cuid"
+            ],
+            "outputPath": "../API/wwwroot",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -31,33 +33,41 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "./node_modules/bootswatch/dist/united/bootstrap.min.css",
-              "./node_modules/font-awesome/css/font-awesome.min.css",
-              "./node_modules/ngx-toastr/toastr.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/bootswatch/dist/united/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/ngx-spinner/animations/timer.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                }
+              },
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -76,9 +86,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "sslKey": "ssl/server.key",
-            "sslCert": "ssl/server.crt",
-            "ssl":true
+            "sslCert": "ssl/localhost.pem",
+            "sslKey": "ssl/localhost-key.pem",
+            "ssl": true
           },
           "configurations": {
             "production": {
@@ -99,10 +109,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
@@ -117,5 +128,7 @@
       }
     }
   },
-  "defaultProject": "client"
+  "cli": {
+    "analytics": "19241a86-6e0b-404f-bedc-d374400b1cb2"
+  }
 }

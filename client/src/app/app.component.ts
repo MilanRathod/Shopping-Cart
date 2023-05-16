@@ -8,9 +8,9 @@ import { BasketService } from './basket/basket.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title = 'Skinet';
 
-  title = 'skinet';
-  constructor(private basketService: BasketService, private accountService: AccountService) { }
+  constructor(private basketService: BasketService, private accountService: AccountService) {}
 
   ngOnInit(): void {
     this.loadBasket();
@@ -19,20 +19,11 @@ export class AppComponent implements OnInit {
 
   loadBasket() {
     const basketId = localStorage.getItem('basket_id');
-    if (basketId) {
-      this.basketService.getBasket(basketId).subscribe(() => {
-      }, error => {
-        console.log(error);
-      });
-    }
+    if (basketId) this.basketService.getBasket(basketId);
   }
 
   loadCurrentUser() {
     const token = localStorage.getItem('token');
-    this.accountService.loadCurrentUser(token).subscribe(() => {
-    }, error => {
-      console.log(error);
-    });
+    this.accountService.loadCurrentUser(token).subscribe();
   }
 }
-

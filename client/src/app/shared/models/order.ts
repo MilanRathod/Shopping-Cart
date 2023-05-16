@@ -1,28 +1,28 @@
-import { IAddress } from "./address";
+import { Address } from "./user";
 
-export interface IOrderToCreate {
+export interface OrderToCreate {
     basketId: string;
     deliveryMethodId: number;
-    shipToAddress: IAddress;
+    shipToAddress: Address;
 }
 
-export interface IOrder {
+export interface Order {
     id: number;
     buyerEmail: string;
-    orderDate: Date;
-    shipToAddress: IAddress;
+    orderDate: string;
+    shipToAddress: Address;
     deliveryMethod: string;
     shippingPrice: number;
-    orderItems: IOrderItem[];
-    subTotal: number;
-    status: string;
+    orderItems: OrderItem[];
+    subtotal: number;
     total: number;
-}
+    status: string;
+  }
 
-export interface IOrderItem {
+  export interface OrderItem {
     productId: number;
     productName: string;
     pictureUrl: string;
     price: number;
     quantity: number;
-}
+  }
